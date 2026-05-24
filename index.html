@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter For Urijiii ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+    background:
+    linear-gradient(135deg,#ffd9e7,#ffeef5,#ffdfe9);
+    position:relative;
+}
+
+/* Floating Hearts */
+
+.hearts span{
+    position:absolute;
+    font-size:35px;
+    opacity:0.15;
+    animation:float 6s infinite ease-in-out;
+}
+
+.hearts span:nth-child(1){
+    left:10%;
+    top:12%;
+}
+
+.hearts span:nth-child(2){
+    right:12%;
+    bottom:12%;
+    animation-delay:2s;
+}
+
+.hearts span:nth-child(3){
+    left:50%;
+    top:18%;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-18px);}
+    100%{transform:translateY(0px);}
+}
+
+/* Envelope */
+
+.wrapper{
+    position:relative;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.envelope{
+    position:relative;
+    width:320px;
+    height:220px;
+    cursor:pointer;
+    transition:1s;
+}
+
+/* Main body */
+
+.base{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#f7b4ca;
+    border-radius:14px;
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.18);
+    overflow:hidden;
+}
+
+/* Bottom Fold */
+
+.base::before{
+    content:"";
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background:#f4a6bf;
+    clip-path:polygon(0 100%,50% 55%,100% 100%);
+    z-index:2;
+}
+
+/* Top Flap */
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#eba0ba;
+    clip-path:polygon(0 0,50% 58%,100% 0);
+    transform-origin:top;
+    transition:1.2s ease;
+    z-index:5;
+}
+
+/* Paper */
+
+.paper{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:92%;
+    height:92%;
+    background:#fffdf9;
+    border-radius:12px;
+    padding:20px;
+    z-index:1;
+    transition:1.5s ease;
+    overflow:hidden;
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Paper Lines */
+
+.paper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 30px,
+        rgba(255,182,193,0.18) 31px
+    );
+    pointer-events:none;
+}
+
+.paper-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    overflow-y:auto;
+    padding-right:5px;
+}
+
+.paper h1{
+    font-family:'Caveat',cursive;
+    text-align:center;
+    color:#ff4f8d;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.paper p{
+    font-family:'Caveat',cursive;
+    color:#5f3e49;
+    line-height:1.5;
+    font-size:30px;
+    white-space:pre-wrap;
+}
+
+/* OPEN EFFECT */
+
+.open .flap{
+    transform:rotateX(180deg);
+}
+
+.open .paper{
+    position:fixed;
+    width:94%;
+    height:92vh;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:50;
+    border-radius:18px;
+    padding:28px;
+    overflow-y:auto;
+    animation:paperOpen 1.2s ease;
+}
+
+@keyframes paperOpen{
+    0%{
+        transform:translate(-50%,-20%);
+        opacity:0;
+    }
+
+    100%{
+        transform:translate(-50%,-50%);
+        opacity:1;
+    }
+}
+
+.open .envelope{
+    transform:scale(0.85);
+}
+
+/* Button */
+
+.btn{
+    margin-top:35px;
+    border:none;
+    padding:16px 34px;
+    border-radius:50px;
+    background:#ff5b97;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:
+    0 12px 25px rgba(255,91,151,0.35);
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .envelope{
+        width:300px;
+        height:210px;
+    }
+
+    .paper h1{
+        font-size:34px;
+    }
+
+    .paper p{
+        font-size:25px;
+    }
+
+    .open .paper{
+        width:96%;
+        height:94vh;
+        padding:22px;
+    }
+
+}
+
+::-webkit-scrollbar{
+    width:5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff9dbf;
+    border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+</div>
+
+<div class="wrapper" id="wrapper">
+
+    <div class="envelope">
+
+        <div class="base"></div>
+
+        <div class="flap"></div>
+
+        <div class="paper">
+
+            <div class="paper-content">
+
+                <h1>For Urijiii ❤️</h1>
+
+                <p>
+Gooddd Morninggg, Afternoon, Eveningggg, Nighttttt Madamjiii 😂❤️
+
+Maane Thani Aap Karii Dekhta Veyoo Oo Letter, Abar Meh Just Notes Likhi Ne Yuu Idea Aayu Ke Maa Pyaari Sii Urijiiiii Ne Kuchhh Hatke Surprise Diya Jaaye 👉🏻👈🏻
+
+Toh Bas Van Din Hand Written Letters Likhyaaa Aaj Digital ❤️😂
+
+(Ye Bhii Handwritten Haii Ek Type Ti Maa Hatho Tis Toh Type Kru Hu 😂❤️)
+
+Hame Vua Haii Raat-ra 12:35, 25th May 2026 ❤️
+
+By the wayy Urijiiiii Aap Aan Worldd Ra Sabtiiiiii Besttesttt Person Ho 🫠❤️
+
+Ne Maare Vasteee Toh World Iss Aap Ho Madamjii 🫶🏻❤️
+
+Ne Manh Roz Aatru Manh Viyen Ke Aapne Ek Edu Hug Dauu Ke Bas Ronu Aavnu Ru Maane 😭🫂
+
+Kyuki Aapre Khava Maate, Khola Maate Yaa Chestt Maate Rova Ru Sukoon Sirf Muiss Hamaj Haku 🫠❤️
+
+Ne Uriiijii Aap Marwad Jao Ho 🫠
+
+Mane Soganti Hametisssss lonely Feel Venu start Vu 🤧
+
+Aap Giyo Baad Kaa Karuu mu 🫠
+
+Call Krje Bro Pleaseee Bohat Hosu Mu ❤️
+
+Ne Broo Aap Bolon
+"Rohit Aatri Overthinking Nhii Karni" ❤️
+
+All I Think Is Aapre Baaram Urijiii ❤️🫂
+
+Aapre Actions,
+Aapru Mood,
+Bas Dimag Maiiss Riyee Kari ❤️
+
+Ne Btww Urijii 👉🏻👈🏻
+
+Woh Van Din Shein Ri Ek Black Kurti Vatai Tin Aapne? 😂❤️
+
+Vaa Meh Order Kidi ❤️
+
+Cash On Delivery Iss Kidu 🤣
+
+Ne Sorry Woh Renu Jiji Vaste Nhii...
+Aapre Vaste Tu 😅❤️
+
+Aap Yuu Toh Liyoo Nhii Jree ❤️
+
+Ne Urijiii...
+Ope Maddddd For Each Other Ho Brooo 🥹❤️
+
+Giftss Ne Surprise Our Lifeeee ❤️🫶🏻😂
+
+Btw Aan Maii Handwriting Kharab Nhii Haii 🤡❤️
+
+Ne Uriii...
+Mu Thanee Bhttt Iss Psnd Karuu 🫠❤️
+
+"Ghandha Wala Pyaar Hogya Haii Aapse 🫠❤️"
+
+Loveeee Youuu Urijiiii 🫠❤️
+
+~ Only & Only Aapka Mard
+Rohit Jagarwalll 🫶🏻
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button class="btn" onclick="openLetter()">
+        Tap To Open 💌
+    </button>
+
+</div>
+
+<script>
+
+function openLetter(){
+    document.getElementById("wrapper").classList.toggle("open");
+}
+
+</script>
+
+</body>
+</html>
